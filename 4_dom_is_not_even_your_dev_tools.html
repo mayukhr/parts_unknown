@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <meta name="viewport" content="width=5, initial-scale=1">
+    <style>
+      h2::before {
+        content: url(http://placekitten.com/200/300);
+      }
+      h2.remove::before {content: "REMOVED CAT!"}
+    </style>
+  </head>
+  <body>
+    <h2 id='myId'>Check Source for ::before, which is NOT even a part of DOM <span style="color:red;">It is part of CSSOM</span></h2>
+    
+    <p>This is why you can not access ::before using DOM javascript API and change the Style.</p>
+    <a href="https://stackoverflow.com/questions/29260296/modify-pseudo-select-after-in-javascript">Check this StackOverflow link which explains how to manipulate CSSOM</a>
+  </body>
+</html>
